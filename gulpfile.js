@@ -3,6 +3,7 @@ var syntax        = 'scss'; // Syntax: sass or scss;
 var gulp          = require('gulp'),
 		gutil         = require('gulp-util' ),
 		scss          = require('gulp-scss'),
+		sass          = require('gulp-sass'),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
 		uglify        = require('gulp-uglify'),
@@ -26,7 +27,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
-	.pipe(scss({"bundleExec": true}))
+	.pipe(sass().on('error', sass.logError))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
