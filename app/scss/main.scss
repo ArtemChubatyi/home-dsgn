@@ -48,6 +48,114 @@ b, strong {
 	font-weight: bold;
 }
 
+// .content {
+//     display: grid;
+//     grid-template-columns: 1fr 40% 1fr;
+//     grid-template-rows: 505px 500px 465px 300px 500px 390px 500px 644px;
+// }
+// 	.header {
+// 		grid-column: 1 / span 2; 
+// 		background: #e9eae2;
+// }
+// 	.menu {
+// 		background: #7acec3;
+// 		grid-column: 3;
+// }
+// .projects {
+//     grid-row: 2;
+//     background: #ebb240;
+// }
+// .fondue {
+//     grid-column: 2;
+//     grid-row: 2;
+//     background: #fefefe
+// }
+
+
+// /* ____________________________________________ */
+// .potter {
+//     grid-column: 3;
+//     grid-row: 2 / span 2;
+//     display: flex;
+//     flex-direction: column;
+// }
+// .lamp {
+//     flex-grow: 1;
+//     background: #dfe0d9;
+// }
+// .tabano {
+//     flex-grow: 2;
+//     background: #e9eae2;
+// }
+// .fiji {
+//     flex-grow: 1;
+//     background: #fff;
+// }
+
+// /* _____________________________________________________ */
+
+// .louis {
+//     grid-row: 3;
+//     grid-column: 1 / span 2;
+//     display: flex;
+// }
+// .xx {
+//     flex-grow: 1;
+//     background: #71808c;
+// }
+// .p22 {
+//     flex-grow: 2;
+//     background: #eaeaea;
+// }
+
+
+// .sessan {
+//     grid-row: 4;
+//     grid-column: 1 / span 2;
+//     display: flex;
+// }
+// .sofa {
+//     flex-grow: 2;
+//     background: #fcfcfc;
+// }
+// .alessi {
+//     flex-grow: 1;
+//     background: #cecece;
+// }
+// .timeline {
+//     grid-row: 4;
+//     grid-column: 3;
+//     background: #ebb240;
+// }
+// .studio {
+//     grid-row: 5;
+//     background: #ff9b6d;
+// }
+// .awards {
+//     grid-row: 5;
+//     grid-column: 2 / span 2;
+//     background: #e9eae2;
+// }
+// .staff {
+//     grid-row: 6;
+//     grid-column: 1 / span 3;
+//     background: #e9eae2;
+// }
+// .news {
+//     grid-row: 7;
+//     background: #d4edbf;
+// }
+// .mauris {
+//     grid-row: 7;
+//     grid-column: 2 / span 2;
+//     background: #e5e9df;
+// }
+// .contact {
+//     grid-row: 8;
+//     grid-column: 1 / span 3;
+//     background: #e9eae2;
+// }
+
 
 
 @import "media"; // Always at the end
