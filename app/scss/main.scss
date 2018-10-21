@@ -50,7 +50,7 @@ b, strong {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 40% 1fr;
+    grid-template-columns: 1fr 37% 1fr;
     grid-template-rows: 505px 500px 465px 300px 500px 390px 500px 644px;
 }
 .header {
@@ -59,6 +59,8 @@ b, strong {
     display: flex;
 
     &__content {
+        position: absolute;
+        z-index: 2;
         margin: {
             top: 50px;
             left: 130px;
@@ -92,15 +94,15 @@ b, strong {
     &__chair {
         flex-grow: 1;
         background-image: url(../img/header-chairs.png);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: 110% 50%;
+        background-position: 79% 50%;
     }
 }
 .menu {
 	background: #7acec3;
     grid-column: 3;
-    svg {
+    &__line {
         display: block;
         width: 100%;
         height: 100%;
@@ -111,11 +113,12 @@ b, strong {
         border: 3px solid #f7f7f7;
         position: absolute;
         top: 50px;
-        right: 13%;
+        right: 11.5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         hr {
             width: 40px;
             border: 1px solid #f7f7f7;
@@ -145,14 +148,117 @@ b, strong {
         line-height: 1;
     }
 }
+
 .projects {
     grid-row: 2;
     background: #ebb240;
+    &__line {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__list {
+        position: relative;
+        left: 22%;
+        margin-top: -359px;
+        width: 150px;
+        height: 67px;
+        font-size: 13px;
+        color: white;
+        line-height: 1.1;
+        list-style-type: none;
+        text-transform: uppercase;
+        &__item::before {
+            content: url(../img/arrow_icon.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 0;
+        }
+        &__item {
+            cursor: pointer;
+            float: left;
+            &:hover{
+                color: black;
+            }
+            &:hover:before {
+                opacity: 1;
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        left: 224px;
+        margin-top: 71px;
+        font-size: 48px;
+        color: white;
+        width: 184px;
+    }
+    
 }
+
 .fondue {
     grid-column: 2;
     grid-row: 2;
-    background: #fefefe
+    background: #fefefe;
+    &__content {
+        margin-top: 87px;
+        margin-left: 12%;
+        width: 263px;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        font-size: 24px;
+    }
+    &__info {
+        font-size: 12px;
+        line-height: 1;
+        text-transform: uppercase;
+        p {
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__view-project {
+        display: block;
+        margin-top: 76px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #333;
+        height: 15px;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
+    &__like {
+        margin-top: 81px;
+        margin-left: 68px;
+        cursor: pointer;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
+    &__image {
+        background-image: url(../img/fondue.png);
+        position: relative;
+        margin-top: -431px;
+        height: 100%;
+        width: 55%;
+        float: right;
+    }
 }
 
 .potter {
@@ -160,18 +266,166 @@ b, strong {
     grid-row: 2 / span 2;
     display: flex;
     flex-direction: column;
+
 }
 .lamp {
-    flex-grow: 1;
     background: #dfe0d9;
+    &__content {
+        margin-top: 30px;
+        margin-left: 5%;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        font-size: 24px;
+        margin: 0;
+    }
+    &__info {
+        font-size: 12px;
+        line-height: 1;
+        width: 187px;
+        p {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__view-project {
+        display: block;
+        margin-top: 16px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #333;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
+    &__like {
+        margin-top: 10px;
+        margin-left: 68px;
+        cursor: pointer;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
+    &__image {
+        background-image: url(../img/lamp_chair.png);
+        position: relative;
+        margin-top: -233px;
+        height: 226px;
+        width: 55%;
+        float: right;
+        background-position: center center;
+    }
 }
 .tabano {
-    flex-grow: 2;
     background: #e9eae2;
+    display: flex;
+    &__content {
+        width: 100%;
+        height: 465px;
+        background-image: url(../img/tabano.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        padding: 42px;
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__like {
+        margin-bottom: -45px;
+        cursor: pointer;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
+    &__view-project {
+        display: block;
+        font-size: 18px;
+        margin-top: 5px;;
+        text-transform: uppercase;
+        color: #333;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
 }
 .fiji {
     flex-grow: 1;
-    background: #fff;
+    background-image: url(../img/fiji.png);
+    background-repeat: no-repeat;
+    &__content {
+        margin-top: 30px;
+        margin-right: 8%;
+        position: relative;
+        z-index: 1;
+        float: right;
+    }
+    &__title {
+        font-size: 24px;
+        margin: 0;
+    }
+    &__info {
+        font-size: 12px;
+        line-height: 1;
+        width: 187px;
+        p {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__view-project {
+        display: block;
+        margin-top: 16px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #333;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
+    &__like {
+        margin-top: 10px;
+        margin-left: 68px;
+        cursor: pointer;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
 }
 
 /* _____________________________________________________ */
@@ -180,14 +434,121 @@ b, strong {
     grid-row: 3;
     grid-column: 1 / span 2;
     display: flex;
+    background: #eaeaea;
 }
 .xx {
-    flex-grow: 1;
-    background: #71808c;
+    color: white;
+    background-image: url(../img/louis.png);
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &__content {
+        margin-top: 30px;
+        margin-left: 7%;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        font-size: 24px;
+        margin: 0;
+    }
+    &__info {
+        font-size: 12px;
+        line-height: 1;
+        width: 187px;
+        p {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__view-project {
+        display: block;
+        margin-top: 38px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: white;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
+    &__like {
+        margin-top: 31px;
+        margin-left: 68px;
+        cursor: pointer;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
 }
 .p22 {
-    flex-grow: 2;
-    background: #eaeaea;
+    width: 70%;
+    background-image: url(../img/p22.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-end;
+    &__wrapper {
+        width: 338px;
+        margin-top: 92px;
+        margin-right: 67px;;
+        display: flex;
+        justify-content: center;
+    }
+    &__inner2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__info {
+        font-size: 12px;
+        line-height: 1;
+        width: 187px;
+        p {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__like {
+        cursor: pointer;
+        margin-top: 10px;
+        p {
+            font-size: 11px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
+    &__view-project {
+        display: block;
+        font-size: 18px;
+        margin-top: 5px;;
+        text-transform: uppercase;
+        color: #333;
+        &::before {
+            content: url(../img/arrow_orange.png); 
+            display: block;
+            float: left;
+            width: 20px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: 1;
+        }
+    }
 }
 
 
