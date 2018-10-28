@@ -736,7 +736,7 @@ b, strong {
     align-items: center;
     &__wrapper {
         display: flex;
-        width: 750px;
+        width:770px;
         justify-content: space-between;
         margin-left: 10%;
     }
@@ -861,16 +861,128 @@ b, strong {
 .news {
     grid-row: 7;
     background: #d4edbf;
+    &__line {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    &__title {
+        position: relative;
+        margin-top: -197px;
+        float: right;
+        margin-right: 22%;
+        color: white;
+        font-size: 48px;
+        text-transform: uppercase;
+    }
 }
 .mauris {
     grid-row: 7;
     grid-column: 2 / span 2;
     background: #e5e9df;
+    display: flex;
+    align-items: center;
+    &__wrapper {
+        display: flex;
+        width: 770px;
+        justify-content: space-between;
+        margin-left: 10%;
+    }
+    &__item {
+        width: 370px;
+        height: 100%;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1;
+        height: 45px;
+    }
+    &__date {
+        font-size: 12px;
+        color: #6a6969;
+    }
+    &__image {
+        background-image: url(../img/mauris__item1.png);
+        height: 180px;
+    }
+    &__image2 {
+        background-image: url(../img/mauris__item2.png);
+        height: 180px;
+    }
+    &__info {
+        width: 370px;
+        height: 55px;
+        margin-top: 22px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: justify;
+        color: #6a6969;
+    }
+    &__link {
+        display: block;
+        font-size: 12px;
+        color: #fd5000;
+        float: right;
+        margin-top: 9px;
+    }
+
+
 }
 .contact {
     grid-row: 8;
     grid-column: 1 / span 3;
     background: #e9eae2;
+    display: flex;
+    &__map {
+        width: 50%
+    }
+    &__info {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content {
+        margin-left: 202px;
+    }
+    &__wrapper {
+        width: 462px;
+        display: flex;
+    }
+    &__adress {
+        display: flex;
+        flex-direction: column;
+        p {
+            width: 114px;
+            height: 67px;
+            font-size: 13px;
+            line-height: 14px;
+            
+        }
+    }
+    &__social-links {
+        margin-top: 51px;
+        justify-self: end;
+        color: #7acec3;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        padding: {
+            left: 12px;
+            right: 12px;
+        }
+        i {
+            text-decoration: none;
+            color: #7acec3;
+            font-size: 20px;
+        }
+    }
+}
+.rights {
+    position: absolute;
+    bottom: 53px;
+    font-size: 12px;
 }
 
 
