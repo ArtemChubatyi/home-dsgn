@@ -16,7 +16,7 @@ body {
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
-	font-family: $default-font;
+	font-family: $roboto;
 	overflow-x: hidden;
 	color: $text;
 	input, textarea {
@@ -38,6 +38,9 @@ body {
 	&.img-width {
 		width: 100%;
 	}
+}
+a {
+    text-decoration: none;
 }
 
 .text-center {
@@ -133,7 +136,7 @@ b, strong {
         font-size: 11px;
         text-transform: uppercase;
         right: 20%;
-        top: 300px;
+        top: 255px;
         line-height: 1;
     }
     .phone {
@@ -161,13 +164,21 @@ b, strong {
         position: relative;
         left: 22%;
         margin-top: -359px;
-        width: 150px;
+        width: 145px;
         height: 67px;
         font-size: 13px;
         color: white;
         line-height: 1.1;
         list-style-type: none;
         text-transform: uppercase;
+        li
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: black;
+                }
+            }
         &__item::before {
             content: url(../img/arrow_icon.png); 
             display: block;
@@ -180,9 +191,6 @@ b, strong {
         &__item {
             cursor: pointer;
             float: left;
-            &:hover{
-                color: black;
-            }
             &:hover:before {
                 opacity: 1;
             }
@@ -195,6 +203,8 @@ b, strong {
         font-size: 48px;
         color: white;
         width: 184px;
+        text-transform: uppercase;
+        font-weight: normal;
     }
     
 }
@@ -212,6 +222,8 @@ b, strong {
     }
     &__title {
         font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -279,6 +291,8 @@ b, strong {
     &__title {
         font-size: 24px;
         margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -387,6 +401,8 @@ b, strong {
     &__title {
         font-size: 24px;
         margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -452,6 +468,8 @@ b, strong {
     &__title {
         font-size: 24px;
         margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -506,6 +524,10 @@ b, strong {
         margin-right: 67px;;
         display: flex;
         justify-content: center;
+    }
+    &__title {
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__inner2 {
         display: flex;
@@ -573,6 +595,8 @@ b, strong {
     &__title {
         font-size: 24px;
         margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -626,6 +650,8 @@ b, strong {
     &__title {
         font-size: 24px;
         margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__info {
         font-size: 12px;
@@ -687,6 +713,11 @@ b, strong {
         line-height: 1.1;
         list-style-type: none;
         text-transform: uppercase;
+        li
+            a {
+                text-decoration: none;
+                color: white;
+            }
         label {
             color: black;
             font-size: 14px;
@@ -726,6 +757,7 @@ b, strong {
         color: white;
         font-size: 48px;
         text-transform: uppercase;
+        font-weight: normal;
     }
 }
 .awards {
@@ -752,6 +784,7 @@ b, strong {
             margin-top: 30px;
             font-size: 18px;
             line-height: 18px;
+            font-weight: 300;
         }
     }
     &__right-column {
@@ -772,11 +805,11 @@ b, strong {
         }
         &__wrap {
             display: flex;
-            margin-top: 29px;
+            margin-top: 24px;
             justify-content: space-between;
             .info {
                 width: 162px;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 14px;
             }
         }
@@ -797,6 +830,7 @@ b, strong {
         &:first-child {
             font-size: 14px;
             line-height: 14px;
+            font-weight: 300;
         }
     }
     &__item {
@@ -874,6 +908,7 @@ b, strong {
         color: white;
         font-size: 48px;
         text-transform: uppercase;
+        font-weight: normal;
     }
 }
 .mauris {
@@ -884,12 +919,12 @@ b, strong {
     align-items: center;
     &__wrapper {
         display: flex;
-        width: 770px;
+        width: 780px;
         justify-content: space-between;
         margin-left: 10%;
     }
     &__item {
-        width: 370px;
+        width: 374px;
         height: 100%;
     }
     &__title {
