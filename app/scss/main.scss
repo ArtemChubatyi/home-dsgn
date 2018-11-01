@@ -678,11 +678,14 @@ b, strong {
     }
     &__like {
         margin-left: 38px;
+        align-self: flex-end;
+        margin-bottom: 8px;
         cursor: pointer;
         p {
             font-size: 11px;
             color: $red;
             margin-top: 5px;
+            margin-bottom: 0px;
         }
     }
 }
