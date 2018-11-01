@@ -232,7 +232,7 @@ b, strong {
                     color: black;
                 }
             }
-        &__item::before {
+        &-item::before {
             content: url(../img/arrow_icon.png); 
             display: block;
             float: left;
@@ -241,7 +241,7 @@ b, strong {
             margin-right: 5px;
             opacity: 0;
         }
-        &__item {
+        &-item {
             cursor: pointer;
             float: left;
             &:hover:before {
@@ -776,7 +776,7 @@ b, strong {
             font-size: 14px;
             margin-left: 24px;
         }
-        &__item::before {
+        &-item::before {
             content: url(../img/arrow_icon.png); 
             display: block;
             float: left;
@@ -785,7 +785,7 @@ b, strong {
             margin-right: 5px;
             opacity: 0;
         }
-        &__item {
+        &-item {
             cursor: pointer;
             float: left;    
             &:hover:before {
