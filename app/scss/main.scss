@@ -30,10 +30,6 @@ body {
 		}
 	}
 }
-:active, :hover, :focus {
-    outline: none;
-    outline-offset: 0;
-}
 
 .img-responsive {
 	display: block;
@@ -133,6 +129,7 @@ b, strong {
         .hamburger {
             transition: all .3s ease-in-out;
             outline: none!important;
+            outline-offset: 0;
             opacity: 1;
             height: 100%;
             width: 100%;
