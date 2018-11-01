@@ -1025,6 +1025,11 @@ b, strong {
     &__map {
         width: 50%
     }
+    &__text {
+        text-transform: uppercase;
+        width: 90px;
+        line-height: 1;
+    }
     &__info {
         width: 50%;
         display: flex;
