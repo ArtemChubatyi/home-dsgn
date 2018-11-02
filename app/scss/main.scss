@@ -51,7 +51,7 @@ b, strong {
 	font-weight: bold;
 }
 .invisible {
-    opacity: 0;
+    display: none;
 }
 .is-active {
     background-color: $orange;
@@ -153,7 +153,6 @@ b, strong {
         transition: all .3s ease-in-out;
         position: absolute;
         margin-left: -372px;
-        background-color: $orange;
     }
     &__list {
         margin: 0;
@@ -168,6 +167,7 @@ b, strong {
         height: 119px;
         float: left;
         a {
+            transition: all .3s ease-in-out;
             color: $white;
             text-decoration: none;
             display: block;
@@ -176,6 +176,10 @@ b, strong {
             text-transform: uppercase;
             text-align: center;
             line-height: 122px;
+            background-color: $orange;
+            &:hover {
+                background-color: #daab4d;
+            }
         }
     }
     .adress {
@@ -385,6 +389,7 @@ b, strong {
     &__image {
         background-image: url(../img/lamp_chair.png);
         position: relative;
+        background-repeat: no-repeat;
         margin-top: -233px;
         height: 226px;
         width: 55%;
@@ -900,7 +905,7 @@ b, strong {
     &__image2 {
         height: 150px;
         width: 100%;
-        background: url(../img/staff__item2.png); 
+        background: url(../img/staff__item2.png) #b0b0b0 no-repeat; 
     }
     &__image3 {
         height: 150px;
